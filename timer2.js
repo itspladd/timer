@@ -17,9 +17,11 @@ args.map(arg => Number(arg))
   .forEach(element => setTimer(element, timerMsg));
 
 stdin.on('data', (key) => {
-  process.stdout.write("E");
   if (key === "\u0003") {
     stdout.write("\n");
     process.exit();
+  }
+  if (key === "b") {
+    setTimer(0, timerMsg);
   }
 });

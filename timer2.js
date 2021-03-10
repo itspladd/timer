@@ -14,7 +14,7 @@ const setTimer = (delay, msg) => {
 
 stdin.on('data', (key) => {
   if (key === "\u0003") {
-    stdout.write("\n");
+    stdout.write("Thanks for using me, ciao!\n");
     process.exit();
   }
   if (key === "b") {

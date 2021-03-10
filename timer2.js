@@ -23,5 +23,7 @@ stdin.on('data', (key) => {
   }
   if (key === "b") {
     setTimer(0, timerMsg);
+  } else if (parseInt(key) >= 1 && parseInt(key) <= 9) {
+    setTimer(key, timerMsg);
   }
 });

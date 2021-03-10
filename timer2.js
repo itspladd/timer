@@ -12,10 +12,6 @@ const setTimer = (delay, msg) => {
   setTimeout(output, delay * 1000);
 };
 
-args.map(arg => Number(arg))
-  .filter(arg => arg >= 0)
-  .forEach(element => setTimer(element, timerMsg));
-
 stdin.on('data', (key) => {
   if (key === "\u0003") {
     stdout.write("\n");
